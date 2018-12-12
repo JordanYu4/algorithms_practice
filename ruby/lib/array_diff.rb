@@ -10,7 +10,7 @@ end
 
 # O(n) implementation 
 def array_diff_faster(arr1, arr2)
-    forbidden = Hash.new(false)
-    arr2.each { |el| forbidden[el] = true }
-    arr1.reject { |el| forbidden[el] }
+    intersection = Hash.new(false)
+    arr2.each { |el| intersection[el] = true }
+    arr1.reject { |el| intersection[el] }
 end
